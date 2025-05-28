@@ -1,0 +1,64 @@
+Dokumentasi API
+Authentication
+POST /api/auth/register
+Body:
+username: String
+password: String
+
+POST /api/auth/login
+Body
+username: String
+password: String
+
+Response:
+{
+  "token": "jwt_token_string"
+}
+
+Stok Barang
+GET /api/stok
+Response:
+[
+  {
+    "id": 1,
+    "nama_barang": "Oli Mesin",
+    "jumlah": 100,
+    "harga_satuan": 2000
+  }
+]
+POST /api/stok
+Body:
+nama_barang: String
+jumlah: int
+Harga_satuan: int
+
+PUT /api/stok/:id
+URL Params: id = ID barang
+Body:
+nama_barang: String
+jumlah: int
+Harga_satuan: int
+
+DELETE /api/stok/:id
+URL Params: id = ID barang
+
+Laporan Penjualan
+GET /api/penjualan
+Response:
+[
+  {
+    "id": 1,
+    "barang_id": 2,
+    "jumlah_terjual": 5,
+    "total_harga": 10000,
+    "nama_barang": "Penghapus"
+  }
+]
+
+POST /api/penjualan
+body:
+barang_id: int
+jumlah_terjual: int
+
+Semua endpoint penjualan & stok barang membutuhkan autentikasi menggunakan JWT token.
+Header: Authorization: Bearer <token>
