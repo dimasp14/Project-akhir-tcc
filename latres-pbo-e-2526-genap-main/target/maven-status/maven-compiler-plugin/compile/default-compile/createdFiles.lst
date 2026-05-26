@@ -1,0 +1,9 @@
+com\pbo\latres\model\FakeTodoRepository.class
+com\pbo\latres\model\TodoTask.class
+com\pbo\latres\model\TodoRepository.class
+com\pbo\latres\controller\TodoController.class
+com\pbo\latres\database\DatabaseConnection.class
+com\pbo\latres\view\TodoView.class
+com\pbo\latres\Latres.class
+com\pbo\latres\repository\MysqlTodoRepository.class
+com\pbo\latres\dto\InsertTodoDTO.class
